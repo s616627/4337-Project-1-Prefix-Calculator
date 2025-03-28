@@ -9,7 +9,7 @@
        [(string=? (vector-ref args 0) "--batch") #f]
        [else #t])))
 
-;;function to display reslut id value
+;;function to display result
 (define (display-result id value)
   (display id)
   (display ": ")
