@@ -22,7 +22,7 @@
     (define input (read-line))
     
     ;;split input string
-    (define tokens string-split input)
+    (define tokens (string-split input))
 
     ;;if else statement
 
