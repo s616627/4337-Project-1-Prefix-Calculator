@@ -12,3 +12,6 @@
 
 2:01 PM 
   Added the mode thing to the program
+
+3:37 PM
+  Added a program to display result
