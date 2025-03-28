@@ -1,7 +1,7 @@
 #lang racket
 
-;;use prompt? to find what mode will be used
-(define prompt?
+;;function to find what mode will be used
+(define interactive?
    (let [(args (current-command-line-arguments))]
      (cond
        [(= (vector-length args) 0) #t]
@@ -11,7 +11,7 @@
 
 ;;function to display error message
 (define (error-msg msg)
-  (when prompt?
+  (when interactive?
       (display "Error: "))
   (displayln msg))
 
@@ -34,10 +34,11 @@
    "pow"    (lambda (a b) (expt a b))
    "mod"    (lambda (a b) (remainder a b))))
 
-;;REPL
+;;REPL (main calculator loop)
 (define (calculator)
   ;;loop of getting inputs
   (define (loop)
+    
     (display ">") (flush-output)
     
     ;;get input
