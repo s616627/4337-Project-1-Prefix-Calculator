@@ -9,3 +9,6 @@
 
 3/28 12:42 PM
   I fixed the syntax error. On line 25, it was supposed to call a function using parethiesis. When i input quit it doesn't work.
+
+2:01 PM 
+  Added the mode thing to the program
