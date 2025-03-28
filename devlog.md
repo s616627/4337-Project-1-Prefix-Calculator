@@ -19,3 +19,6 @@
 
 4:39 PM
   Added a function to display error messages
+
+5:56 PM
+  Changed prompt? to interactive? for readability
