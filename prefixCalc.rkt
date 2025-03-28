@@ -9,6 +9,12 @@
        [(string=? (vector-ref args 0) "--batch") #f]
        [else #t])))
 
+;;function to display error message
+(define (error-msg msg)
+  (when prompt?
+      (display "Error: "))
+  (displayln msg))
+
 ;;function to display result
 (define (display-result id value)
   (display id)
