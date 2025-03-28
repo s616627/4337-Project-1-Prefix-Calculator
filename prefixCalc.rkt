@@ -1,5 +1,14 @@
 #lang racket
 
+;;use prompt? to find what mode will be used
+(define prompt?
+   (let [(args (current-command-line-arguments))]
+     (cond
+       [(= (vector-length args) 0) #t]
+       [(string=? (vector-ref args 0) "-b") #f]
+       [(string=? (vector-ref args 0) "--batch") #f]
+       [else #t])))
+
 ;;operator hash table
 (define operator-table
   (hash
@@ -23,8 +32,6 @@
     
     ;;split input string
     (define tokens (string-split input))
-
-    ;;if else statement
 
     ;;if 'quit' is inputed, quit program
     (cond
