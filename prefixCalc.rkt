@@ -9,6 +9,13 @@
        [(string=? (vector-ref args 0) "--batch") #f]
        [else #t])))
 
+;;function to display reslut id value
+(define (display-result id value)
+  (display id)
+  (display ": ")
+  (display(real->double-flonum value))
+  (newline))
+
 ;;operator hash table
 (define operator-table
   (hash
