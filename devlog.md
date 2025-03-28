@@ -6,3 +6,6 @@
 
 9:53 PM
   I got a syntax error and the program only works for expressions with only one operator. I'm about to submint what i have so far
+
+3/28 12:42 PM
+  I fixed the syntax error. On line 25, it was supposed to call a function using parethiesis. When i input quit it doesn't work.
