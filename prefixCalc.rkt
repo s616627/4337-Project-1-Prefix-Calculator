@@ -43,7 +43,7 @@
     [(member (firts-tokens) (hash-keys operator-table))
      (define op (first tokens))
      (define proc (hash-ref operator-table op))
-     cond(
+     (cond
           ;;unary operator "-"
           [(equal? op "-")
            (define-values (a rest1) (eval-expr (rest tokens) history))
