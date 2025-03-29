@@ -28,24 +28,24 @@
    "+"      (lambda (a b) (+ a b))
    "-"      (lambda (a b) (- a b))
    "*"      (lambda (a b) (* a b))
-   "/"      (lambda (a b) (/ a b))
+   "/"      (lambda (a b) (if (= b 0) (error "division by zero") (quotient a b)))
    "square" (lambda (a) (* a a))
    "cube"   (lambda (a) (* a a a))
    "pow"    (lambda (a b) (expt a b))
    "mod"    (lambda (a b) (remainder a b))))
 
 ;;evaluator
-(define (eval-expr tokens history))
+(define (eval-expr tokens history)
   (cond
     [(null? tokens) (error "unexcpected end of input")]
 
     ;;for the operator
-    [(member (firts-tokens) (hash-keys operator-table))
+    [(member (first tokens) (hash-keys operator-table))
      (define op (first tokens))
      (define proc (hash-ref operator-table op))
      (cond
           ;;unary operator "-"
-          [(equal? op "-")
+          [(equal? op "-" "square" "cube")
            (define-values (a rest1) (eval-expr (rest tokens) history))
            (values (proc a) rest1)]
        ;; binary operators
