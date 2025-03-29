@@ -22,3 +22,6 @@
 
 5:56 PM
   Changed prompt? to interactive? for readability
+
+10:56 PM
+  redid how the repl and finding out operands work. also has a history system. returns a syntax error
