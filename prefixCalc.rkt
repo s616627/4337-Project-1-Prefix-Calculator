@@ -100,8 +100,7 @@
           (with-handlers ([exn:fail? (lambda (e) (error-msg (exn-message e)) (loop history))])
             (define-values (result rest) (eval-expr tokens history))
             (if (null? rest)
-                (begin
-                  (define new-history (cons result history))
+                (let ([new-history (cons result history)])
                   (display-result (length new-history) result)
                   (loop new-history))
                 (begin (error-msg "Leftover input after expression") (loop history))))])]))
