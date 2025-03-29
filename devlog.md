@@ -25,3 +25,6 @@
 
 10:56 PM
   redid how the repl and finding out operands work. also has a history system. returns a syntax error
+
+11:09 PM
+  changed a cond( to (cond
