@@ -30,3 +30,5 @@
   changed a cond( to (cond
 
 11:15 fixed more typos, added square and cube to unary, and fixed dividing by 0
+
+11:25 PM Edited readme file 
