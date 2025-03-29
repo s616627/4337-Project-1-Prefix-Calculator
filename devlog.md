@@ -34,3 +34,5 @@
 11:25 PM Edited readme file 
 
 11:29 PM added a function to detect blank strings
+
+11:35 PM Fixed a typo related to declaring variables and the history function
