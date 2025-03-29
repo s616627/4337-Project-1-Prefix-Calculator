@@ -22,6 +22,10 @@
   (display(real->double-flonum value))
   (newline))
 
+;; function that detects blank strings
+(define (string-blank? s)
+  (or (string=? s "") (regexp-match? #px"^\\s*$" s)))
+
 ;;operator hash table
 (define operator-table
   (hash
